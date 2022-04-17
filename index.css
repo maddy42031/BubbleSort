@@ -1,0 +1,183 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+::selection {
+  background-color: rgb(125, 105, 255);
+}
+body {
+  background-color: #060613;
+  color: rgb(214, 215, 223);
+  font-family: "Inter", Courier, monospace;
+}
+nav {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#navContainer > p {
+  font-family: "Rubik Glitch", sans-serif;
+  transition: all 0.2s ease-out;
+  cursor: default;
+  letter-spacing: 0.1rem;
+  background: -webkit-linear-gradient(
+    40deg,
+    rgb(46, 183, 128),
+    rgb(79, 87, 195),
+    rgb(249, 101, 175)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glitch;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  font-size: 4rem;
+  animation-delay: 1s;
+}
+#navContainer > img {
+  filter: drop-shadow(0px -5px 7px rgb(74, 194, 152));
+  animation: danceLogo;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  transition: 0.4s;
+}
+#navContainer > img:hover {
+  filter: drop-shadow(0px 0px 7px rgb(209, 20, 118));
+}
+@keyframes danceLogo {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    filter: drop-shadow(0px -5px 7px rgb(209, 74, 118));
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+.heading {
+  text-align: center;
+  background: -webkit-linear-gradient(
+    60deg,
+    rgb(55, 191, 175),
+    rgb(42, 176, 129)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.listDiv {
+  background-color: #161627;
+  border-radius: 5px;
+  color: rgb(193, 193, 198);
+  font-size: 1.2rem;
+}
+table td {
+  border: 2px solid rgb(193, 193, 198);
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+}
+.pHeading {
+  font-weight: 600;
+  color: aliceblue;
+}
+ul > li {
+  margin-top: 1rem;
+}
+.pPara {
+  line-height: 2rem;
+  font-weight: 500;
+  text-align: justify;
+}
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #fc00ff 0%,
+    #00dbde 51%,
+    #fc00ff 100%
+  );
+}
+.btn-grad {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+.downloadAni {
+  animation: downloadAni;
+  animation-duration: 0.9s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+@keyframes downloadAni {
+  0% {
+    background-position: left center;
+    color: #fff;
+  }
+  50% {
+    background-position: right center;
+    color: #fff;
+  }
+  100% {
+    background-position: left center;
+    color: #fff;
+  }
+}
+.contactLogo {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: max-content;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  transition: all 0.3s;
+}
+.contactLogo > a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.contactLogo:hover {
+  text-decoration: underline;
+}
+.instagram > a {
+  text-decoration: none;
+  color: paleturquoise;
+}
+.instagram > a:hover {
+  text-decoration: underline;
+}
+@media only screen and (max-width: 500px) {
+  #navContainer > p {
+    font-size: 3.2rem;
+  }
+}
